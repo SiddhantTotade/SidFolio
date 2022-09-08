@@ -18,7 +18,7 @@ export const Home = () => {
                         </Link>
                     </div>
                 </div>
-                <div className='px-12'>
+                <div>
                     <img src={HeroImage} alt="my profile pic" className='rounded-2xl mx-auto w-2/3 md:w-150' />
                 </div>
             </div>
