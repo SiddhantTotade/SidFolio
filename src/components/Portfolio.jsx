@@ -3,8 +3,6 @@ import amazonClone from '../assets/amazonClone.png'
 import periodicTableGUI from '../assets/periodicTableGUI.png'
 import videoChatting from '../assets/videoChatting.png'
 import todoApplication from '../assets/todoApplication.png'
-// import reactSmooth from '../assets/portfolio/reactSmooth.jpg'
-// import reactWeather from '../assets/portfolio/reactWeather.jpg'
 
 export const Portfolio = () => {
 
@@ -53,7 +51,7 @@ export const Portfolio = () => {
                 <div className='py-6 grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
                     {portfolios.map(({ id, src, demo, code }) => (
                         <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
-                            <img src={src} alt="" className='rounded-md hover:scale-150 duration-200' />
+                            <img src={src} alt="" className='rounded-md hover:scale-110 duration-500' />
                             <div className='flex items-center justify-center'>
                                 <button onClick={() => window.open(demo)} className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Demo</button>
                                 <button onClick={() => window.open(code)} className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Code</button>
