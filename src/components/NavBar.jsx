@@ -21,7 +21,7 @@ function NavBar() {
         },
         {
             id: 4,
-            link: 'experience',
+            link: 'development',
         },
         {
             id: 5,
