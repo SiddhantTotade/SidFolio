@@ -1,4 +1,5 @@
 import { About } from "./components/About";
+import { AchievementsAndCertificates } from "./components/AchievementAndCertificates";
 import { Contact } from "./components/Contact";
 import { Development } from "./components/Development";
 import { Home } from "./components/Home";
@@ -13,6 +14,7 @@ function App() {
       <About />
       <Portfolio />
       <Development />
+      <AchievementsAndCertificates />
       <Contact />
     </div>
   );
