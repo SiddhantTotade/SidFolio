@@ -18,11 +18,33 @@ import django from '../assets/django.png'
 
 export const Development = () => {
 
-    const breakPoints = [
-        { width: 1, itemsToShow: 4 },
-        { width: 550, itemsToShow: 2 },
-        { width: 768, itemsToShow: 3 },
-        { width: 1200, itemsToShow: 4 },
+    const breakP = [
+        {
+            breakpoint: 500,
+        },
+        {
+            breakpoint: 700,
+        }
+    ]
+
+    const breakPoint = [
+        {
+            breakpoint: 768,
+            cols: 2,
+            rows: 2,
+            gap: 10,
+            showDots: true,
+            scroll: true,
+        },
+        {
+            breakpoint: 600,
+            cols: 1,
+            rows: 3,
+            gap: 10,
+            showDots: true,
+            scroll: true,
+            hideArrow: true
+        }
     ]
 
     const techs = [
@@ -110,15 +132,15 @@ export const Development = () => {
     return (
         <div name='development' className='bg-white w-full h-screen'>
             <div className='max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-gray-600'>
-                <div>
-                    <p className='text-4xl font-bold border-b-4 border-gray-600 p-2 inline'>Development</p>
+                <div className=' mx-auto'>
+                    <p className='sm:mx-auto text-4xl font-bold border-b-4 border-gray-600 p-2 inline'>Development</p>
                     <p className='py-6'></p>
                 </div>
                 <div className='block text-center py-8 px-12 sm:px-0'>
-                    <Carousel breakPoints={breakPoints} cols={3} rows={3} gap={20} className="">
+                    <Carousel mobileBreakpoint={breakP} responsiveLayout={breakPoint} cols={3} rows={3} gap={10} showDots={true} scrollSnap={true} hideArrow={false}>
                         {
                             techs.map(({ id, source, title, style }) => (
-                                <Carousel.Item className="bg-slate-700">
+                                <Carousel.Item>
                                     <div key={id} className={`m-5 shadow-md hover:scale-110 duration-500 py-2 rounded-lg ${style}`}>
                                         <img src={source} alt="" className='w-20 mx-auto' />
                                         <p className='mt-4'>{title}</p>
