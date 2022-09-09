@@ -6,6 +6,9 @@ import css from '../assets/css.png'
 import javascript from '../assets/javascript.png'
 import reactImage from '../assets/react.png'
 import cProg from '../assets/cProg.png'
+import cPP from '../assets/cpp.png'
+import java from '../assets/java.png'
+import python from '../assets/python.png'
 import jQuery from '../assets/jquery.png'
 import bootStrap from '../assets/bootstrap.png'
 import github from '../assets/github.png'
@@ -46,13 +49,13 @@ export const Experience = () => {
             id: 4,
             source: reactImage,
             title: "React",
-            style: "shadow-blue-600"
+            style: "shadow-sky-400"
         },
         {
             id: 5,
             source: tailwind,
             title: "Tailwind",
-            style: "shadow-sky-400"
+            style: "shadow-sky-700"
         },
         {
             id: 6,
@@ -70,19 +73,37 @@ export const Experience = () => {
             id: 8,
             source: bootStrap,
             title: "Bootstrap",
-            style: "shadow-emerald-900"
+            style: "shadow-purple-900"
         },
         {
             id: 9,
             source: jQuery,
             title: "JQuery",
-            style: "shadow-emerald-900"
+            style: "shadow-sky-800"
         },
         {
             id: 10,
             source: cProg,
             title: "C Programming",
-            style: "shadow-emerald-900"
+            style: "shadow-indigo-800"
+        },
+        {
+            id: 10,
+            source: cPP,
+            title: "C++",
+            style: "shadow-sky-800"
+        },
+        {
+            id: 10,
+            source: java,
+            title: "Java",
+            style: "shadow-red-500"
+        },
+        {
+            id: 10,
+            source: python,
+            title: "Python",
+            style: "shadow-yellow-400"
         },
     ]
 
