@@ -93,12 +93,12 @@ export const Experience = () => {
                     <p className='text-4xl font-bold border-b-4 border-gray-600 p-2 inline'>Experience</p>
                     <p className='py-6'></p>
                 </div>
-                <div className='w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0'>
-                    <Carousel cols={2} rows={2} gap={10}>
+                <div className='block text-center py-8 px-12 sm:px-0'>
+                    <Carousel breakPoints={breakPoints} cols={3} rows={3} gap={20} className="">
                         {
                             techs.map(({ id, source, title, style }) => (
-                                <Carousel.Item>
-                                    <div key={id} className={`shadow-md hover:scale-110 duration-500 py-2 rounded-lg ${style}`}>
+                                <Carousel.Item className="bg-slate-700">
+                                    <div key={id} className={`m-5 shadow-md hover:scale-110 duration-500 py-2 rounded-lg ${style}`}>
                                         <img src={source} alt="" className='w-20 mx-auto' />
                                         <p className='mt-4'>{title}</p>
                                     </div>
