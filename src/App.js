@@ -1,5 +1,5 @@
 import { About } from "./components/About";
-import { Experience } from "./components/Experience";
+import { Development } from "./components/Development";
 import { Home } from "./components/Home";
 import NavBar from "./components/NavBar";
 import { Portfolio } from "./components/Portfolio.jsx";
@@ -11,7 +11,7 @@ function App() {
       <Home />
       <About />
       <Portfolio />
-      <Experience />
+      <Development />
     </div>
   );
 }

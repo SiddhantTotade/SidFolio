@@ -16,7 +16,7 @@ import whiteGit from '../assets/whiteGit.png'
 import tailwind from '../assets/tailwind.png'
 import django from '../assets/django.png'
 
-export const Experience = () => {
+export const Development = () => {
 
     const breakPoints = [
         { width: 1, itemsToShow: 4 },
