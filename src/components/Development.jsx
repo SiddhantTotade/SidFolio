@@ -34,7 +34,7 @@ export const Development = () => {
             rows: 2,
             gap: 10,
             showDots: true,
-            scroll: true,
+            scrollSnap: true,
         },
         {
             breakpoint: 600,
@@ -42,8 +42,7 @@ export const Development = () => {
             rows: 3,
             gap: 10,
             showDots: true,
-            scroll: true,
-            hideArrow: true
+            scrollSnap: true,
         }
     ]
 
@@ -132,9 +131,9 @@ export const Development = () => {
     return (
         <div name='development' className='bg-white w-full h-screen'>
             <div className='max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-gray-600'>
-                <div className=' mx-auto'>
-                    <p className='sm:mx-auto text-4xl font-bold border-b-4 border-gray-600 p-2 inline'>Development</p>
-                    <p className='py-6'></p>
+                <div className=''>
+                    <p className='text-4xl font-bold border-b-4 border-gray-600 p-2 inline'>Development</p>
+                    <p className='py-8'>Technologies that I learned and use for development.</p>
                 </div>
                 <div className='block text-center py-8 px-12 sm:px-0'>
                     <Carousel mobileBreakpoint={breakP} responsiveLayout={breakPoint} cols={3} rows={3} gap={10} showDots={true} scrollSnap={true} hideArrow={false}>

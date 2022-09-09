@@ -30,7 +30,7 @@ function NavBar() {
     ]
 
     return (
-        <div className='flex justify-between items-center w-full px-4 h-20 text-white bg-gradient-to-r from-cyan-500 to-blue-500 fixed'>
+        <div className='flex justify-between items-center w-full px-4 h-20 z-50 text-white bg-gradient-to-r from-cyan-500 to-blue-500 fixed'>
             <div>
                 <h1 className='text-4xl font-signature ml-2'>Siddhant Totade</h1>
             </div>
