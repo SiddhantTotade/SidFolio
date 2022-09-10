@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import Lightbox from 'react-image-lightbox'
+import React from 'react'
 import Carousel from 'react-grid-carousel'
 import airForce from '../assets/airForce.jpg'
 import pythonBasic from '../assets/pythonBasic.jpg'
@@ -111,10 +110,12 @@ export const AchievementsAndCertificates = () => {
                         {
                             techs.map(({ id, source, title, style }) => (
                                 <Carousel.Item>
-                                    <div key={id} className={`m-5 shadow-md hover:scale-110 duration-500 py-2 rounded-lg ${style}`}>
-                                        <img src={source} alt="" className='w-20 mx-auto h-20' />
-                                        <p className='mt-4'>{title}</p>
-                                    </div>
+                                    <a href={source} target="_blank" rel="noreferrer">
+                                        <div key={id} className={`m-5 shadow-md hover:scale-110 duration-500 py-2 rounded-lg ${style}`}>
+                                            <img src={source} alt="" className='w-20 mx-auto h-20' />
+                                            <p className='mt-4'>{title}</p>
+                                        </div>
+                                    </a>
                                 </Carousel.Item>
                             ))}
                     </Carousel>
