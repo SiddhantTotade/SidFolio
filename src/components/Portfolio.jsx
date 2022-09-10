@@ -43,11 +43,11 @@ export const Portfolio = () => {
     ];
 
     return (
-        <div name="portfolio" className='bg-white w-full text-gray-600 md:h-screen dark:bg-slate-700 transition-all'>
+        <div name="portfolio" className='bg-white w-full text-gray-600 md:h-screen dark:bg-black transition-all'>
             <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
                 <div className='mt-28'>
-                    <p className='text-4xl font-bold inline border-b-4 border-gray-500'>Portfolio</p>
-                    <p className='py-8'>Projects that I made from my learned skills.</p>
+                    <p className='text-4xl font-bold inline border-b-4 border-gray-500 dark:text-gray-500'>Portfolio</p>
+                    <p className='py-8 dark:text-gray-300'>Projects that I made from my learned skills.</p>
                 </div>
                 <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
                     {portfolios.map(({ id, src, demo, code }) => (
@@ -57,8 +57,8 @@ export const Portfolio = () => {
                                 <img src={src} alt="" className='rounded-md hover:scale-110 duration-500' />
                             </a>
                             <div className='flex items-center justify-center'>
-                                <button onClick={() => window.open(demo)} className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 hover:text-sky-500'>Demo</button>
-                                <button onClick={() => window.open(code)} className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 hover:text-sky-500'>Code</button>
+                                <button onClick={() => window.open(demo)} className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 dark:text-gray-300 dark:hover:text-sky-500'>Demo</button>
+                                <button onClick={() => window.open(code)} className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 dark:text-gray-300 dark:hover:text-sky-500'>Code</button>
                             </div>
                         </div>
                     ))}

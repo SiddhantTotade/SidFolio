@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaSun, FaMoon } from "react-icons/fa";
 import { ThemeContext } from './ThemeContext';
+import { BsSun, BsMoon } from 'react-icons/bs'
 
 const Toggle = () => {
     const { theme, setTheme } = React.useContext(ThemeContext);
@@ -8,9 +8,9 @@ const Toggle = () => {
     return (
         <div>
             {theme === 'dark' ? (
-                <FaSun onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="cursor-pointer" />
+                <BsSun size={30} color="orange" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="cursor-pointer ease-in-out"/>
             ) : (
-                <FaMoon onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="cursor-pointer" />
+                <BsMoon size={30} color="black" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="cursor-pointer ease-in-out"/>
             )}
         </div>
     );

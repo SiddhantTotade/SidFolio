@@ -35,17 +35,17 @@ function NavBar() {
     ]
 
     return (
-        <div className='flex justify-between items-center w-full px-4 h-20 z-50 text-white border-b-2 border-black dark:bg-slate-700 transition-all bg-gray-300 rounded-b-2xl fixed'>
+        <div className='flex justify-between items-center w-full px-4 h-20 z-50 text-white dark:text-gray-300 border-b border-black dark:border-b-gray-700 dark:bg-transparent opacity-100 backdrop-blur-md transition-all bg-cyan-700 fixed'>
             <div>
                 <h1 className='text-4xl font-signature ml-2'>Siddhant Totade</h1>
             </div>
             <ul className='hidden md:flex'>
                 {links.map(({ id, link }) => (
-                    <li key={id} className='px-4 cursor-pointer capitalize font-medium text-white hover:scale-105 duration-200'>
+                    <li key={id} className='px-4 cursor-pointer capitalize font-medium text-white dark:text-gray-300 hover:scale-105 duration-200 dark:hover:text-sky-500'>
                         <Link to={link} smooth duration={500}>{link}</Link>
                     </li>
                 ))}
-                <div className='absolute right-10 top-28 border-4 border-fuchsia-600 p-4 cursor-pointer'>
+                <div className='absolute right-10 top-28 border-2 rounded-lg border-sky-500 p-3 cursor-pointer'>
                     <Toggle />
                 </div>
             </ul>
