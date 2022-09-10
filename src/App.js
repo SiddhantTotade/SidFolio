@@ -6,6 +6,7 @@ import { Development } from "./components/Development";
 import { Home } from "./components/Home";
 import NavBar from "./components/NavBar";
 import { Portfolio } from "./components/Portfolio.jsx";
+import { SocialLinks } from './components/SocialLinks';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <Development />
       <AchievementsAndCertificates />
       <Contact />
+      <SocialLinks />
     </div>
   );
 }
