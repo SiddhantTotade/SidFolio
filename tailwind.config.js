@@ -4,9 +4,14 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      letterSpacing: {
+        remfour: '0.4rem'
+      },
+    },
     fontFamily: {
-      signature: ["Bitter"],
+      signature: ["Bitter, serif"],
+      magic: ["Noto Serif Georgian, serif"],
     },
   },
   plugins: [],

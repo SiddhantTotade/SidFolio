@@ -1,3 +1,4 @@
+import './App.css'
 import { About } from "./components/About";
 import { AchievementsAndCertificates } from "./components/AchievementAndCertificates";
 import { Contact } from "./components/Contact";
@@ -7,6 +8,7 @@ import NavBar from "./components/NavBar";
 import { Portfolio } from "./components/Portfolio.jsx";
 
 function App() {
+
   return (
     <div className="App">
       <NavBar />

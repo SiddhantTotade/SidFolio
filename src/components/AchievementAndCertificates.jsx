@@ -101,7 +101,7 @@ export const AchievementsAndCertificates = () => {
     return (
         <div name='certificates' className='bg-white w-full h-screen'>
             <div className='max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-gray-600'>
-                <div className=''>
+                <div className='mt-28'>
                     <p className='text-4xl font-bold border-b-4 border-gray-600 p-2 inline'>Certificates</p>
                     <p className='py-8'>These are my achievements and certificates that I earned till the date.</p>
                 </div>
