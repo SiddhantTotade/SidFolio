@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { Component } from 'react'
+import Lightbox from 'react-image-lightbox'
 import Carousel from 'react-grid-carousel'
 import airForce from '../assets/airForce.jpg'
 import pythonBasic from '../assets/pythonBasic.jpg'
