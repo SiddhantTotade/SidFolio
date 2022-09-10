@@ -35,10 +35,9 @@ function NavBar() {
     ]
 
     return (
-        <div className='flex justify-between items-center w-full px-4 h-20 z-50 text-white bg-gradient-to-r from-cyan-500 to-blue-500 fixed'>
+        <div className='flex justify-between items-center w-full px-4 h-20 z-50 text-white border-b-2 border-black dark:bg-slate-700 transition-all bg-gray-300 rounded-b-2xl fixed'>
             <div>
                 <h1 className='text-4xl font-signature ml-2'>Siddhant Totade</h1>
-                <Toggle />
             </div>
             <ul className='hidden md:flex'>
                 {links.map(({ id, link }) => (
@@ -46,6 +45,9 @@ function NavBar() {
                         <Link to={link} smooth duration={500}>{link}</Link>
                     </li>
                 ))}
+                <div className='absolute right-10 top-28 border-4 border-fuchsia-600 p-4 cursor-pointer'>
+                    <Toggle />
+                </div>
             </ul>
 
             <div onClick={() => setNav(!nav)} className='cursor-pointer pr-4 z-10 text-white md:hidden transition-all ease-in duration-500'>

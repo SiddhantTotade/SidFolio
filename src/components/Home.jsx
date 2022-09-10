@@ -5,7 +5,7 @@ import { Link } from 'react-scroll'
 
 export const Home = () => {
     return (
-        <div name="home" className='h-screen max-w-full scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-100'>
+        <div name="home" className='h-screen max-w-full scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-100 dark:bg-slate-700 transition-all'>
             <div className='max-w-screen-xl mx-auto flex flex-col items-center justify-center h-full md:flex-row'>
                 <div className='mt-48 md:mt-0 sm:mt-80' >
                     <img src={HeroImage} alt="my profile pic" className='rounded-2xl mx-auto w-2/3 sm:w-80 md:w-2/3' />

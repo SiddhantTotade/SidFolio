@@ -8,9 +8,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ThemeProvider>
-      <body className='bg-white dark:bg-slate-700 transition-all'>
-        <App />
-      </body>
+      <App />
     </ThemeProvider>
   </React.StrictMode>
 );
