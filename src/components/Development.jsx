@@ -80,7 +80,7 @@ export const Development = () => {
         },
         {
             id: 6,
-            source: whiteGit,
+            source: github,
             title: "GitHub",
             style: "shadow-gray-400"
         },
