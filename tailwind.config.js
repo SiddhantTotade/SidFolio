@@ -13,6 +13,7 @@ module.exports = {
     fontFamily: {
       signature: ["Bitter, serif"],
       magic: ["Noto Serif Georgian, serif"],
+      poppins: ['poppins', 'sans-serif'],
     },
   },
   plugins: [],

@@ -12,7 +12,6 @@ import python from '../assets/python.png'
 import jQuery from '../assets/jquery.png'
 import bootStrap from '../assets/bootstrap.png'
 import github from '../assets/github.png'
-import whiteGit from '../assets/whiteGit.png'
 import tailwind from '../assets/tailwind.png'
 import django from '../assets/django.png'
 

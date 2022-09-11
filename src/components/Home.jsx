@@ -13,8 +13,8 @@ export const Home = () => {
                 <div className='flex flex-col justify-center h-full w-11/12 md:mr-4'>
                     <p className='text-sm tracking-[.3em] md:tracking-remfour font-magic dark:text-sky-500 text-cyan-700 uppercase py-3 pt-10 md:py-2'>all the magic happens here.</p>
                     <h2 className='text-4xl sm:text-7xl font-bold text-gray-500'>I'm a Full Stack Web Developer</h2>
-                    <p className='text-stone-900 dark:text-gray-300 py-4 max-w-md'>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus aliquid cumque illum impedit voluptatum expedita nemo non, atque quae aut, perspiciatis corrupti, ratione dicta sunt. Reiciendis necessitatibus tempora accusamus commodi officia vel veritatis dicta, maiores assumenda nulla aliquam voluptatem laborum nostrum explicabo aperiam illo debitis. Eius numquam fugiat natus commodi.
+                    <p className='text-stone-900 dark:text-gray-300 py-4 max-w-md font-poppins'>
+                        Hiii...I'm SIDDHANT TOTADE. I'm a coder and a full stack web developer. I love to learn new technologies and create web applications.
                     </p>
                     <div>
                         <Link to='portfolio' smooth duration={500} className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md hover:scale-110 duration-500 dark:bg-sky-500 bg-cyan-700 cursor-pointer'>

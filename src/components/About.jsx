@@ -7,12 +7,12 @@ export const About = () => {
                 <div className='mt-28'>
                     <p className='text-4xl font-bold inline border-b-4 border-gray-500 dark:text-gray-500'>About</p>
                 </div>
-                <p className='text-xl mt-10 text-stone-900 dark:text-gray-300'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa itaque nemo consequatur quidem ducimus! Quam non suscipit accusantium eligendi delectus praesentium similique tenetur quo facere ab cupiditate esse laborum assumenda beatae ad, quia id possimus? Officiis, possimus maiores distinctio ipsum libero, voluptatem dolorum quos provident fugiat sapiente, eos ullam et.
+                <p className='mt-10 text-sm text-stone-900 dark:text-gray-300 font-poppins'>
+                    On my own, I'm a full stack web developer from raipur chhattisgarh INDIA. I've done my schooling of class 10th from KENDRIYA VIDYALAYA No. - 1, Raipur and 12th from MAHARISHI VIDYA MANDIR, Raipur. Currently I'm pursuing B.Tech in Computer Science and Engineering from MATS University and also learning, mastering and lifting my steps towards web.
                 </p>
                 <br />
-                <p className='text-xl text-stone-900 dark:text-gray-300'>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque reiciendis laborum, amet doloribus laboriosam labore quae, pariatur commodi sint vitae mollitia illum quidem ratione voluptatem soluta, voluptas distinctio error nostrum dolorem corporis est asperiores officiis. Mollitia, est alias animi doloribus quam ad adipisci, sequi dolor, perspiciatis veniam nostrum cumque laboriosam.
+                <p className=' text-sm text-stone-900 dark:text-gray-300 font-poppins'>
+                    I'm creative and have enthusiastic personality that keen me and helps me to learn about new technologies. I've learned most of my skills from internet and I know where to find good stuffs. I know frontend and backend and used my skills to create intermidiary stuffs on it. I love to work on new ideas and projects. Apart from this, I also love to play football and I'm a BEATBOXER.
                 </p>
             </div>
         </div>

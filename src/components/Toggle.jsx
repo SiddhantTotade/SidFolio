@@ -8,9 +8,9 @@ const Toggle = () => {
     return (
         <div>
             {theme === 'dark' ? (
-                <BsSun size={30} color="orange" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="cursor-pointer ease-in-out"/>
+                <BsSun size={30} color="orange" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="cursor-pointer"/>
             ) : (
-                <BsMoon size={30} color="black" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="cursor-pointer ease-in-out"/>
+                <BsMoon size={30} color="black" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="cursor-pointer"/>
             )}
         </div>
     );
