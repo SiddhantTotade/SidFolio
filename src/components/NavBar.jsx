@@ -36,7 +36,7 @@ function NavBar() {
 
     return (
         <>
-            <div className='flex justify-between items-center w-full px-4 h-16 md:h-20 z-50 text-white dark:text-gray-300 dark:border-b-gray-700 dark:bg-transparent opacity-100 backdrop-blur-md transition-all bg-cyan-700 fixed'>
+            <div className='flex justify-between items-center w-full px-4 h-16 md:h-20 z-50 text-white dark:text-gray-300 border-b dark:border-b-gray-700 dark:bg-transparent opacity-100 backdrop-blur-md transition-all bg-cyan-700 fixed'>
                 <div>
                     <h1 className='text-3xl md:text-4xl font-signature ml-2'>Siddhant Totade</h1>
                 </div>
