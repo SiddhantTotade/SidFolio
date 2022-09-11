@@ -60,7 +60,7 @@ function NavBar() {
                     </ul>
                 )}
             </div>
-            <div className='fixed right-5 bottom-5 border-2 rounded-lg bg-transparent hover:scale-110 duration-500 backdrop-blur-sm opacity-100 border-sky-500 p-3 cursor-pointer'>
+            <div className='fixed z-50 right-5 bottom-5 border-2 rounded-lg bg-transparent hover:scale-110 duration-500 backdrop-blur-sm opacity-100 border-sky-500 p-3 cursor-pointer'>
                 <Toggle />
             </div>
         </>
