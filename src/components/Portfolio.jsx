@@ -4,6 +4,7 @@ import amazonClone from '../assets/amazonClone.png'
 import periodicTableGUI from '../assets/periodicTableGUI.png'
 import videoChatting from '../assets/videoChatting.png'
 import todoApplication from '../assets/todoApplication.png'
+import portfolio_react from '../assets/portfolio_react.png'
 
 export const Portfolio = () => {
 
@@ -61,10 +62,12 @@ export const Portfolio = () => {
             code: `https://github.com/SiddhantTotade/todo_list`,
             demo: `https://my-work-list.herokuapp.com/`
         },
-        // {
-        //     id: 5,
-        //     src: reactSmooth
-        // },
+        {
+            id: 5,
+            src: portfolio_react,
+            code: `https://github.com/SiddhantTotade/my-portfolio-react`,
+            demo: `https://aboutsid.netlify.app/`
+        },
         // {
         //     id: 6,
         //     src: reactWeather
