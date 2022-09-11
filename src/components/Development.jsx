@@ -31,7 +31,7 @@ export const Development = () => {
             breakpoint: 768,
             cols: 2,
             rows: 2,
-            gap: 10,
+            gap: 0,
             showDots: true,
             scrollSnap: true,
         },
@@ -39,7 +39,7 @@ export const Development = () => {
             breakpoint: 600,
             cols: 1,
             rows: 3,
-            gap: 10,
+            gap: 0,
             showDots: true,
             scrollSnap: true,
         }
@@ -128,26 +128,28 @@ export const Development = () => {
     ]
 
     return (
-        <div name='development' className='bg-white w-full h-screen text-gray-600 dark:bg-black transition-all'>
-            <div className='max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full '>
-                <div className='mt-28'>
-                    <p className='text-4xl font-bold border-b-4 border-gray-600 text-gray-500 p-2 inline'>Development</p>
-                    <p className='py-8 dark:text-gray-300'>Technologies that I learned and use for development.</p>
-                </div>
-                <div className='text-center py-8 sm:px-0'>
-                    <Carousel mobileBreakpoint={breakPoints} responsiveLayout={breakPoint} cols={3} rows={3} showDots={true} scrollSnap={true} hideArrow={false}>
-                        {
-                            techs.map(({ id, source, title, style }) => (
-                                <Carousel.Item>
-                                    <div key={id} className={`m-5 shadow-md hover:scale-110 duration-500 py-2 rounded-lg ${style}`}>
-                                        <img src={source} alt="" className='w-20 mx-auto' />
-                                        <p className='mt-4 dark:text-gray-300'>{title}</p>
-                                    </div>
-                                </Carousel.Item>
-                            ))}
-                    </Carousel>
+        <>
+            <div name='development' className='bg-white w-full h-screen text-gray-600 dark:bg-black transition-all'>
+                <div className='max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full '>
+                    <div className=''>
+                        <p className='text-3xl md:text-4xl font-bold border-b-4 border-gray-600 dark:text-gray-500 p-2 inline'>Development</p>
+                        <p className='pt-6 md:py-8 dark:text-gray-300'>Technologies that I learned and use for development.</p>
+                    </div>
+                    <div className='text-center md:px-0'>
+                        <Carousel mobileBreakpoint={breakPoints} responsiveLayout={breakPoint} cols={3} rows={3} gap={0} showDots={true} scrollSnap={true} hideArrow={false}>
+                            {
+                                techs.map(({ id, source, title, style }) => (
+                                    <Carousel.Item>
+                                        <div key={id} className={`m-5 shadow-md hover:scale-110 duration-500 rounded-lg ${style}`}>
+                                            <img src={source} alt="" className='w-20 mx-auto' />
+                                            <p className='mt-2 md:mt-4 dark:text-gray-300'>{title}</p>
+                                        </div>
+                                    </Carousel.Item>
+                                ))}
+                        </Carousel>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }

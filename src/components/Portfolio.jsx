@@ -1,10 +1,39 @@
 import React from 'react'
+import Carousel from 'react-grid-carousel'
 import amazonClone from '../assets/amazonClone.png'
 import periodicTableGUI from '../assets/periodicTableGUI.png'
 import videoChatting from '../assets/videoChatting.png'
 import todoApplication from '../assets/todoApplication.png'
 
 export const Portfolio = () => {
+
+    const breakPoints = [
+        {
+            breakpoint: 500,
+        },
+        {
+            breakpoint: 700,
+        }
+    ]
+
+    const breakPoint = [
+        {
+            breakpoint: 768,
+            cols: 2,
+            rows: 2,
+            gap: 0,
+            showDots: true,
+            scrollSnap: true,
+        },
+        {
+            breakpoint: 600,
+            cols: 1,
+            rows: 3,
+            gap: 0,
+            showDots: true,
+            scrollSnap: true,
+        }
+    ]
 
     const portfolios = [
         {
@@ -43,27 +72,32 @@ export const Portfolio = () => {
     ];
 
     return (
-        <div name="portfolio" className='bg-white w-full text-gray-600 md:h-screen dark:bg-black transition-all'>
-            <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
-                <div className='mt-28'>
-                    <p className='text-4xl font-bold inline border-b-4 border-gray-500 dark:text-gray-500'>Portfolio</p>
-                    <p className='py-8 dark:text-gray-300'>Projects that I made from my learned skills.</p>
-                </div>
-                <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
-                    {portfolios.map(({ id, src, demo, code }) => (
-
-                        <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
-                            <a href={src} target="_blank" rel="noreferrer">
-                                <img src={src} alt="" className='rounded-md hover:scale-110 duration-500' />
-                            </a>
-                            <div className='flex items-center justify-center'>
-                                <button onClick={() => window.open(demo)} className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 dark:text-gray-300 dark:hover:text-sky-500'>Demo</button>
-                                <button onClick={() => window.open(code)} className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 dark:text-gray-300 dark:hover:text-sky-500'>Code</button>
-                            </div>
-                        </div>
-                    ))}
+        <>
+            <div name="portfolio" className='bg-white w-full text-gray-600 md:h-screen dark:bg-black transition-all'>
+                <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
+                    <div className=''>
+                        <p className='text-3xl md:text-4xl font-bold inline border-b-4 border-gray-500 dark:text-gray-500'>Portfolio</p>
+                        <p className='pt-6 md:py-8 dark:text-gray-300'>Projects that I made from my learned skills.</p>
+                    </div>
+                    <div className='sm:px-0'>
+                        <Carousel className='w-full m-5' mobileBreakpoint={breakPoints} responsiveLayout={breakPoint} cols={3} rows={2} gap={0} showDots={true} scrollSnap={true} hideArrow={false}>
+                            {portfolios.map(({ id, src, demo, code }) => (
+                                <Carousel.Item>
+                                    <div key={id} className='m-5 shadow-md shadow-gray-600 rounded-lg'>
+                                        <a href={src} target="_blank" rel="noreferrer">
+                                            <img src={src} alt="" className='rounded-md hover:scale-110 duration-500' />
+                                        </a>
+                                        <div className='flex items-center justify-center'>
+                                            <button onClick={() => window.open(demo)} className='w-1/2 px-6 m-4 md:py-3 duration-200 hover:scale-105 dark:text-gray-300 dark:hover:text-sky-500'>Demo</button>
+                                            <button onClick={() => window.open(code)} className='w-1/2 px-6 m-4 md:py-3 duration-200 hover:scale-105 dark:text-gray-300 dark:hover:text-sky-500'>Code</button>
+                                        </div>
+                                    </div>
+                                </Carousel.Item>
+                            ))}
+                        </Carousel>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
