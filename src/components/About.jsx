@@ -13,7 +13,7 @@ export const About = () => {
                     </p>
                     <br />
                     <p className=' text-sm text-stone-900 dark:text-gray-300 font-poppins'>
-                        I'm creative and have enthusiastic personality that keen me and helps me to learn about new technologies. I've learned most of my skills from internet and I know where to find good stuffs. I know frontend and backend and used my skills to create intermidiary stuffs on it. I love to work on new ideas and projects. Apart from this, I also love to play football and I'm a BEATBOXER.
+                        I'm creative and have enthusiastic personality that keen me and helps me to learn about new technologies. I've learned most of my skills from internet and I know where to find good stuffs. I know frontend and backend and used my skills to create intermidiary stuffs on it. I love to work on new ideas and projects and also love to know about people and their profession that helps me to develop different outlooks. Apart from this, I also love to play football and I'm a BEATBOXER.
                     </p>
                 </div>
             </div>
