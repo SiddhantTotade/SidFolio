@@ -81,7 +81,7 @@ export const AchievementsAndCertificates = () => {
         {
             id: 7,
             source: loweParticipation,
-            title: "Lowe's Paticipation",
+            title: "Lowe's Participation",
             style: "shadow-gray-500"
         },
         {
