@@ -9,7 +9,7 @@ export const About = () => {
                         <p className='text-3xl md:text-4xl font-bold inline border-b-4 border-gray-500 dark:text-gray-500'>About</p>
                     </div>
                     <p className='pt-6 md:mt-10 text-sm text-stone-900 dark:text-gray-300 font-poppins'>
-                        On my own, I'm a full stack web developer from raipur chhattisgarh INDIA. I've done my schooling of class 10th from KENDRIYA VIDYALAYA No. - 1, Raipur and 12th from MAHARISHI VIDYA MANDIR, Raipur. Currently I'm pursuing B.Tech in Computer Science and Engineering from MATS University and also learning, mastering and lifting my steps towards web.
+                        I'm a self taught full stack web developer from raipur chhattisgarh INDIA. I've done my schooling of class 10th from KENDRIYA VIDYALAYA No. - 1, Raipur and 12th from MAHARISHI VIDYA MANDIR, Raipur. Currently I'm pursuing B.Tech in Computer Science and Engineering from MATS University and also learning, mastering and lifting my steps towards web.
                     </p>
                     <br />
                     <p className=' text-sm text-stone-900 dark:text-gray-300 font-poppins'>
