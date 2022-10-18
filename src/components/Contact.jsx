@@ -18,9 +18,9 @@ export const Contact = () => {
                     </div>
                     <div className='flex justify-center items-center'>
                         <form onSubmit={handleSubmit} action="https://getform.io/f/4804e731-5f9e-4e3f-8b11-e2da49168e90" method='POST' className='flex flex-col w-full md:w-1/2'>
-                            <input res required type="text" name='name' placeholder='Enter your name' className='p-2 bg-transparent border-2 border-gray-400 rounded-md text-black focus:outline-none' />
-                            <input required type="text" name='email' placeholder='Enter your email' className='my-4 p-2 bg-transparent border-2 border-gray-400 rounded-md text-black focus:outline-none' />
-                            <textarea required name="message" rows="10" placeholder='Enter your message' className='p-2 bg-transparent border-2 border-gray-400 rounded-md text-black focus:outline-none'></textarea>
+                            <input res required type="text" name='name' placeholder='Enter your name' className='p-2 bg-transparent border-2 border-gray-400 rounded-md text-black focus:outline-none dark:text-white' />
+                            <input required type="text" name='email' placeholder='Enter your email' className='my-4 p-2 bg-transparent border-2 border-gray-400 rounded-md text-black focus:outline-none dark:text-white' />
+                            <textarea required name="message" rows="10" placeholder='Enter your message' className='p-2 bg-transparent border-2 border-gray-400 rounded-md text-black focus:outline-none dark:text-white'></textarea>
                             <button className='text-white bg-cyan-700 dark:bg-sky-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300'>Let's talk</button>
                         </form>
                     </div>
