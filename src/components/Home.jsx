@@ -11,6 +11,11 @@ export const Home = () => {
                     <div className='mt-48 md:mt-0 sm:mt-80' >
                         <img src={HeroImage} alt="my profile pic" className='rounded-2xl mx-auto w-2/3 sm:w-80 md:w-2/3' />
                     </div>
+                    <div class="wrapper">
+                        <div id="stars"></div>
+                        <div id="stars2"></div>
+                        <div id="stars3"></div>
+                    </div>
                     <div className='flex flex-col justify-center h-full w-11/12 md:mr-4'>
                         <p className='text-sm tracking-[.3em] md:tracking-remfour font-magic dark:text-sky-500 text-cyan-700 uppercase py-3 pt-10 md:py-2'>all the magic happens here.</p>
                         <h2 className='text-4xl sm:text-7xl font-bold text-gray-500'>I'm a Full Stack Web Developer</h2>
@@ -28,11 +33,6 @@ export const Home = () => {
                             </Link>
                         </div>
                     </div>
-                </div>
-                <div class="wrapper">
-                    <div id="stars"></div>
-                    <div id="stars2"></div>
-                    <div id="stars3"></div>
                 </div>
             </div>
         </>
