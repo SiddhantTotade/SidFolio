@@ -134,6 +134,11 @@ export const Development = () => {
                     <div className=''>
                         <p className='text-3xl md:text-4xl font-bold border-b-4 border-gray-600 dark:text-gray-500 p-2 inline'>Development</p>
                         <p className='pt-6 md:py-8 dark:text-gray-300'>Technologies that I learned and use for development.</p>
+                        <div className='hidden dark:block dark:rotate-12 dark:w-1/5 dark:h-96 dark:absolute'>
+                            {[...Array(5)].map((x, i) =>
+                                <div class="star"></div>
+                            )}
+                        </div>
                     </div>
                     <div className='text-center md:px-0'>
                         <Carousel mobileBreakpoint={breakPoints} responsiveLayout={breakPoint} cols={3} rows={3} gap={0} showDots={true} scrollSnap={true} hideArrow={false}>

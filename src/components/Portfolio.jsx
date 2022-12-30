@@ -79,6 +79,11 @@ export const Portfolio = () => {
             <div name="portfolio" className='bg-white w-full text-gray-600 md:h-screen dark:bg-black transition-all'>
                 <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
                     <div className=''>
+                        {/* <div class="sky" className='absolute border-2 left-96 -z-50'>
+                            <div class="star" ></div>
+                            <div class="star" ></div>
+                            <div class="star" ></div>
+                        </div> */}
                         <p className='text-3xl md:text-4xl font-bold inline border-b-4 border-gray-500 dark:text-gray-500'>Portfolio</p>
                         <p className='pt-6 md:py-8 dark:text-gray-300'>Projects that I made from my learned skills.</p>
                     </div>
@@ -98,6 +103,11 @@ export const Portfolio = () => {
                                 </Carousel.Item>
                             ))}
                         </Carousel>
+                    </div>
+                    <div className='hidden dark:block dark:rotate-12 dark:w-2/5 dark:h-96 right-34 dark:absolute'>
+                        {[...Array(10)].map((x, i) =>
+                            <div class="star"></div>
+                        )}
                     </div>
                 </div>
             </div>

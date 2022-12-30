@@ -16,6 +16,11 @@ export const Home = () => {
                         <h2 className='text-4xl sm:text-7xl font-bold text-gray-500'>I'm a Full Stack Web Developer</h2>
                         <p className='text-stone-900 dark:text-gray-300 py-4 max-w-md font-poppins'>
                             Hiii...I'm SIDDHANT TOTADE. I'm a coder and a full stack web developer. I love to learn new technologies and create web applications.
+                            <div className='hidden dark:block dark:rotate-12 dark:w-1/5 dark:h-96 dark:top-80 dark:absolute -z-5'>
+                                {[...Array(5)].map((x, i) =>
+                                    <div class="star"></div>
+                                )}
+                            </div>
                         </p>
                         <div>
                             <Link to='portfolio' smooth duration={500} className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md hover:scale-110 duration-500 dark:bg-sky-500 bg-cyan-700 cursor-pointer'>
@@ -23,6 +28,11 @@ export const Home = () => {
                             </Link>
                         </div>
                     </div>
+                </div>
+                <div class="wrapper">
+                    <div id="stars"></div>
+                    <div id="stars2"></div>
+                    <div id="stars3"></div>
                 </div>
             </div>
         </>
