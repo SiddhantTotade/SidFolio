@@ -104,11 +104,11 @@ export const Portfolio = () => {
                             ))}
                         </Carousel>
                     </div>
-                    <div className='hidden dark:block dark:rotate-12 dark:w-2/5 dark:h-96 right-34 dark:absolute'>
+                    {/* <div className='hidden dark:block dark:rotate-12 dark:w-2/5 dark:h-96 right-34 dark:absolute'>
                         {[...Array(10)].map((x, i) =>
                             <div class="star"></div>
                         )}
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </>

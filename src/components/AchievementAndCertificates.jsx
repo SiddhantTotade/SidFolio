@@ -121,11 +121,11 @@ export const AchievementsAndCertificates = () => {
                                 ))}
                         </Carousel>
                     </div>
-                    <div className='hidden dark:block dark:rotate-12 dark:w-1/5 dark:h-96 dark:absolute'>
+                    {/* <div className='hidden dark:block dark:rotate-12 dark:w-1/5 dark:h-96 dark:absolute'>
                         {[...Array(5)].map((x, i) =>
                             <div class="star"></div>
                         )}
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </>

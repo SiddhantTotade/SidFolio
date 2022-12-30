@@ -14,11 +14,11 @@ export const About = () => {
                     <br />
                     <p className=' text-sm text-stone-900 dark:text-gray-300 font-poppins'>
                         I'm creative and have enthusiastic personality that keen me and helps me to learn about new technologies. I've learned most of my skills from internet and I know where to find good stuffs. I know frontend and backend and used my skills to create intermidiary stuffs on it. I love to work on new ideas and projects and also love to know about people and their profession that helps me to develop different outlooks. Apart from this, I also love to play football and I'm a BEATBOXER.
-                        <div className='hidden dark:block dark:rotate-12 dark:w-2/5 dark:h-96 right-34 dark:absolute -z-5'>
+                        {/* <div className='hidden dark:block dark:rotate-12 dark:w-2/5 dark:h-96 right-34 dark:absolute -z-5'>
                             {[...Array(3)].map((x, i) =>
                                 <div class="star"></div>
                             )}
-                        </div>
+                        </div> */}
                     </p>
                 </div>
             </div>
