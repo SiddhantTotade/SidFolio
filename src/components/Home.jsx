@@ -21,7 +21,7 @@ export const Home = () => {
                         <h2 className='text-4xl sm:text-7xl font-bold text-gray-500'>I'm a Full Stack Web Developer</h2>
                         <p className='text-stone-900 dark:text-gray-300 py-4 max-w-md font-poppins'>
                             Hiii...I'm SIDDHANT TOTADE. I'm a coder and a full stack web developer. I love to learn new technologies and create web applications.
-                            <div className='hidden dark:block dark:rotate-12 dark:w-1/5 dark:md:w-1 border-2 border-red-600 dark:h-96 dark:top-80 dark:absolute'>
+                            <div className='hidden dark:block dark:rotate-12 dark:w-1/5 border-2 border-red-600 md:animate-animStar dark:top-96 dark:absolute'>
                                 {[...Array(5)].map((x, i) =>
                                     <div class="star"></div>
                                 )}

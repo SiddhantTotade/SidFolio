@@ -639,7 +639,7 @@
     animation-delay: 925ms;
 }
 
-@keyframes tail {
+/* @keyframes tail {
     0% {
         width: 0;
     }
@@ -651,9 +651,9 @@
     100% {
         width: 0;
     }
-}
+} */
 
-@keyframes shining {
+/* @keyframes shining {
     0% {
         width: 0;
     }
@@ -665,7 +665,7 @@
     100% {
         width: 0;
     }
-}
+} */
 
 @keyframes shooting {
     0% {
@@ -673,6 +673,6 @@
     }
 
     100% {
-        transform: translateX(480px);
+        transform: translateX(280px);
     }
 }
