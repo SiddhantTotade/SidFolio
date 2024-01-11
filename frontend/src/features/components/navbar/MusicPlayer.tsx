@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { Box } from "@mui/material";
 
 import Music from "~/assets/SidFolioMusic.mp3";
-import Wave from "./Wave";
+import Wave from "../../ui/Wave";
 
 export default function MusicPlayer() {
   const [status, setStatus] = useState(false);

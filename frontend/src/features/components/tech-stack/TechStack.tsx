@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import ConstructionIcon from "@mui/icons-material/Construction";
-import BinarySvg from "./BinarySvg";
+import BinarySvg from "../../ui/BinarySvg";
 
 export default function TechStack() {
   return (

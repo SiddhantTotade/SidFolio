@@ -30,7 +30,7 @@ export default function MobileNavLink() {
       }}
     >
       {navLinks.map((link, id) => (
-        <Link key={id} href={`#${link}`}>
+        <Link key={id} href={`#${link.toLowerCase()}`}>
           {link === "Home" ? (
             <HomeIcon />
           ) : link === "About" ? (

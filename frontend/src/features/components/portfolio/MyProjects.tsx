@@ -15,6 +15,7 @@ export default function MyProjects() {
   return (
     <Box
       sx={{
+        width: "100%",
         display: "grid",
         gridTemplateColumns: "repeat(auto-fill, minmax(400px, 1fr))",
         placeItems: "center",
@@ -26,7 +27,7 @@ export default function MyProjects() {
           <Card
             ref={refs[id]}
             elevation={12}
-            sx={{ width: "80%", marginTop: "20px", margin: 0, padding: "10px" }}
+            sx={{ width: "90%", marginTop: "20px", margin: 0, padding: "10px" }}
             className="handle"
           >
             <Box
