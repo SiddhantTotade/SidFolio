@@ -1,5 +1,7 @@
 import { AppBar, Toolbar, Typography, Box } from "@mui/material";
+
 import NavLink from "./NavLinks";
+
 export default function Navbar() {
   return (
     <AppBar

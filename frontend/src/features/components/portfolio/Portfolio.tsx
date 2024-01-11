@@ -6,7 +6,6 @@ export default function Portfolio() {
     <Typography
       component="div"
       sx={{
-        marginTop: "50px",
         letterSpacing: "50px",
         fontSize: "200px",
         "@media(max-width:1096px)": {

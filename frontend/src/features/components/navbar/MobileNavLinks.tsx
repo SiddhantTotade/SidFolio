@@ -23,6 +23,7 @@ export default function MobileNavLink() {
         bottom: 20,
         position: "fixed",
         zIndex: "10",
+        border: "2px solid black",
         "@media(min-width:700px)": {
           display: "none",
         },

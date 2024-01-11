@@ -2,8 +2,11 @@ import { Typography, Box } from "@mui/material";
 import DataContainer from "../common/DataContainer";
 import Image from "../common/Image";
 import SvgDesign from "~/features/ui/SvgDesign";
+import { useAboutQuery } from "~/features/serivces/apiService";
 
 export default function AboutPage() {
+  const { data } = useAboutQuery(undefined);
+
   return (
     <DataContainer>
       <Box
@@ -11,7 +14,8 @@ export default function AboutPage() {
           width: "50%",
           position: "absolute",
           background: "transparent",
-          transform: "translate(-200%, -33%)",
+          left: "0",
+          transform: "translate(-200%, -15%)",
           zIndex: "-2",
           opacity: "0.4",
           "@media(max-width:1096px)": {
@@ -24,12 +28,7 @@ export default function AboutPage() {
       <Typography fontSize={40}>About Me</Typography>
       <Box sx={{ display: "flex", width: "100%" }}>
         <Typography sx={{ textAlign: "justify" }}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, nemo
-          aliquid? Voluptatibus voluptates doloribus modi quisquam reiciendis,
-          blanditiis molestiae veritatis magni neque voluptas iusto adipisci
-          saepe ipsa tempora est placeat soluta expedita dolore rerum sapiente
-          officia temporibus nobis. Velit non praesentium mollitia. Distinctio
-          harum eum neque molestias saepe at ad.
+          {data?.[0].description}
         </Typography>
         <Box
           sx={{

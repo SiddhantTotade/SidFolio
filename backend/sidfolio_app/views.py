@@ -1,3 +1,4 @@
+from .models import Projects, Skills, About
 from .serializers import ProjectSerializer, AboutSerializer, SkillsSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -7,9 +8,32 @@ from rest_framework import status
 
 class ProjectView(APIView):
     def get(self, request):
-        serialized_data = ProjectSerializer(data=request.data, many=True)
-        print(serialized_data.data)
+        try:
+            projects = Projects.objects.all()
+            serialized_data = ProjectSerializer(projects, many=True)
 
-        if serialized_data.is_valid():
-            return Response({"projects": serialized_data.data}, status=status.HTTP_200_OK)
-        return Response({"projects": serialized_data.data}, status=status.HTTP_404_NOT_FOUND)
+            return Response(serialized_data.data, status=status.HTTP_200_OK)
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+
+
+class AboutView(APIView):
+    def get(self, request):
+        try:
+            about = About.objects.all()
+            serialized_data = AboutSerializer(about, many=True)
+
+            return Response(serialized_data.data, status=status.HTTP_200_OK)
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+
+
+class SkillsView(APIView):
+    def get(self, request):
+        try:
+            skills = Skills.objects.all()
+            serialized_data = SkillsSerializer(skills, many=True)
+
+            return Response(serialized_data.data, status=status.HTTP_200_OK)
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)

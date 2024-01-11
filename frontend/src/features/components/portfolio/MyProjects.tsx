@@ -1,112 +1,96 @@
-import styles from "./styles/project-card.module.css";
-import { useRef, useEffect } from "react";
-import { useSpring, animated, to } from "@react-spring/web";
-import { useGesture } from "@use-gesture/react";
-import { Typography, Box } from "@mui/material";
+import { createRef } from "react";
+import Draggable from "react-draggable";
+import { useNavigate } from "react-router-dom";
+import { Typography, Box, Card } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
-const calcX = (y: number, ly: number) =>
-  -(y - ly - window.innerHeight / 2) / 20;
-const calcY = (x: number, lx: number) => (x - lx - window.innerWidth / 2) / 20;
+import { useProjectsQuery } from "~/features/serivces/apiService";
 
 export default function MyProjects() {
-  useEffect(() => {
-    const preventDefault = (e: Event) => e.preventDefault();
-    document.addEventListener("gesturestart", preventDefault);
-    document.addEventListener("gesturechange", preventDefault);
-
-    return () => {
-      document.removeEventListener("gesturestart", preventDefault);
-      document.removeEventListener("gesturechange", preventDefault);
-    };
-  }, []);
-
-  const target = useRef(null);
-  const [{ x, y, rotateX, rotateY, rotateZ, zoom, scale }, api] = useSpring(
-    () => ({
-      rotateX: 0,
-      rotateY: 0,
-      rotateZ: 0,
-      scale: 1,
-      zoom: 0,
-      x: 0,
-      y: 0,
-      config: { mass: 5, tension: 350, friction: 40 },
-    })
-  );
-
-  useGesture(
-    {
-      onDrag: ({ active, offset: [x, y] }) =>
-        api({ x, y, rotateX: 0, rotateY: 0, scale: active ? 1 : 1.1 }),
-      onPinch: ({ offset: [d, a] }) => api({ zoom: d / 200, rotateZ: a }),
-      onMove: ({ xy: [px, py], dragging }) =>
-        !dragging &&
-        api({
-          rotateX: calcX(py, y.get()),
-          rotateY: calcY(px, x.get()),
-          scale: 1.1,
-        }),
-      onHover: ({ hovering }) =>
-        !hovering && api({ rotateX: 0, rotateY: 0, scale: 1 }),
-    },
-    { target, eventOptions: { passive: false } }
-  );
+  const { data } = useProjectsQuery(undefined);
+  const navigate = useNavigate();
+  const refs = data?.map(() => createRef());
 
   return (
-    <div className={styles.container}>
-      <animated.div
-        ref={target}
-        className={styles.card}
-        style={{
-          transform: "perspective(1000px)",
-          x,
-          y,
-          scale: to([scale, zoom], (s, z) => s + z),
-          rotateX,
-          rotateY,
-          rotateZ,
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <Typography fontSize={25} fontWeight={"bold"}>
-            Martle
-          </Typography>
-          <Typography
-            fontSize={14}
-            fontWeight={"bold"}
-            sx={{ textAlign: "justify" }}
+    <Box
+      sx={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fill, minmax(400px, 1fr))",
+        placeItems: "center",
+        gap: "30px",
+      }}
+    >
+      {data?.map((project: any, id: string) => (
+        <Draggable nodeRef={refs[id]} key={id} handle=".handle">
+          <Card
+            ref={refs[id]}
+            elevation={12}
+            sx={{ width: "80%", marginTop: "20px", margin: 0, padding: "10px" }}
+            className="handle"
           >
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste eos
-            laboriosam animi tempore quos in ipsam laudantium totam neque,
-            fugiat nobis laborum odit, optio at facilis, labore delectus? Sed
-            dicta eum ab debitis alias incidunt deserunt eveniet labore enim
-            quam.
-          </Typography>
-        </Box>
-        <Box
-          sx={{
-            height: "10vh",
-            display: "flex",
-            marginTop: "10px",
-            justifyContent: "space-around",
-            alignItems: "center",
-          }}
-        >
-          <GitHubIcon
-            sx={{ cursor: "none" }}
-            onClick={() => console.log("hello")}
-          />
-          <OpenInNewIcon sx={{ cursor: "none" }} />
-        </Box>
-      </animated.div>
-    </div>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <Typography fontSize={25} fontWeight={"bold"}>
+                {project.title}
+              </Typography>
+              <Typography
+                fontSize={14}
+                fontWeight={"bold"}
+                sx={{ textAlign: "justify" }}
+              >
+                {project.description}
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                height: "10vh",
+                display: "flex",
+                marginTop: "10px",
+              }}
+            >
+              {!project.is_live ? (
+                <Box
+                  sx={{
+                    width: project.is_live ? "50%" : "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <GitHubIcon
+                    onClick={() => {
+                      navigate(project.github);
+                    }}
+                    sx={{ cursor: "none" }}
+                  />
+                </Box>
+              ) : (
+                <Box
+                  sx={{
+                    width: project.is_live ? "50%" : "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <OpenInNewIcon
+                    onClick={() => {
+                      navigate(project.live);
+                    }}
+                    sx={{ cursor: "none" }}
+                  />
+                </Box>
+              )}
+            </Box>
+          </Card>
+        </Draggable>
+      ))}
+    </Box>
   );
 }

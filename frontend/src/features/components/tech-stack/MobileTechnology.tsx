@@ -1,23 +1,56 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import ConstructionIcon from "@mui/icons-material/Construction";
+
 import Image from "../common/Image";
-import html from "~/assets/HTML.svg";
+import { useSkillsQuery } from "~/features/serivces/apiService";
 
 export default function MobileTechnology() {
+  const { data } = useSkillsQuery(undefined);
+
   return (
     <Box
       sx={{
-        width: "100%",
         display: "grid",
-        gridTemplateColumns: "repeat(3, 1fr);",
-        height: "20vh",
-        gap: "10px",
-        marginTop: "10%",
+        justifyItems: "center",
         "@media(min-width:700px)": {
           display: "none",
         },
       }}
     >
-      <Image img_src={html} width="100px" height="100px" />
+      <Typography fontSize={30} sx={{ justifyContent: "center" }}>
+        TECH ST
+        {
+          <ConstructionIcon
+            fontSize="medium"
+            sx={{
+              gap: "10px",
+              padding: "0px 3px",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          />
+        }
+        CK
+      </Typography>
+      <Box
+        sx={{
+          width: "100%",
+          display: "grid",
+          placeItems: "center",
+          gridTemplateColumns: "repeat(3, 1fr);",
+          gap: "50px",
+          marginTop: "10%",
+        }}
+      >
+        {data?.map((image, id) => (
+          <Image
+            key={id}
+            img_src={`http://127.0.0.1:8000${image.skill_logo}`}
+            width="30px"
+            height="30px"
+          />
+        ))}
+      </Box>
     </Box>
   );
 }

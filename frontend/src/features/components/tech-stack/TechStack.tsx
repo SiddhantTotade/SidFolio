@@ -1,20 +1,15 @@
 import { Box, Typography } from "@mui/material";
 import ConstructionIcon from "@mui/icons-material/Construction";
-import Technologies from "./Technologies";
-import MobileTechnology from "./MobileTechnology";
+import BinarySvg from "./BinarySvg";
 
 export default function TechStack() {
   return (
     <>
+      <BinarySvg />
       <Box
         sx={{
           display: "flex",
           alignItems: "center",
-          gap: "10px",
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%,-50%)",
           "@media(max-width:700px)": {
             position: "relative",
             top: 0,
@@ -24,7 +19,7 @@ export default function TechStack() {
           },
         }}
       >
-        <Typography fontWeight={"bold"} fontSize={50}>
+        <Typography color={"#ffffff"} fontWeight={"bold"} fontSize={50}>
           Tech
         </Typography>
         <Typography
@@ -35,14 +30,13 @@ export default function TechStack() {
             alignItems: "center",
             writingMode: "vertical-lr",
             textOrientation: "upright",
+            color: "#ffffff",
           }}
         >
           ST{<ConstructionIcon sx={{ marginTop: "10px", fontSize: "50px" }} />}
           CK
         </Typography>
-        <Technologies />
       </Box>
-      <MobileTechnology />
     </>
   );
 }

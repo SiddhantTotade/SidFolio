@@ -5,9 +5,10 @@ export default function SvgDesign() {
       version="1.1"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       width="1000"
-      height="500"
+      height="400"
       preserveAspectRatio="none"
       viewBox="0 0 1440 560"
+      style={{}}
     >
       <g mask='url("#SvgjsMask1016")' fill="none">
         <rect
