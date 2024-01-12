@@ -1,7 +1,7 @@
 venv
-backend/sidfolio_app/migrations
-backend/sidfolio_app/__pycache__
-backend/sidfolio_project/__pycache__
-backend/db.sqlite3
-backend/.env
+sidfolio_app/migrations
+sidfolio_app/__pycache__
+sidfolio_project/__pycache__
+db.sqlite3
+.env
 .vercel
