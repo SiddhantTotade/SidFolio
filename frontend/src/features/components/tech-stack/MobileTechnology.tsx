@@ -42,10 +42,10 @@ export default function MobileTechnology() {
           marginTop: "10%",
         }}
       >
-        {data?.map((image, id) => (
+        {data?.map((skill: string | any, id: number) => (
           <Image
             key={id}
-            img_src={`http://127.0.0.1:8000${image.skill_logo}`}
+            img_src={`http://127.0.0.1:8000${skill.skill_logo}`}
             width="30px"
             height="30px"
           />

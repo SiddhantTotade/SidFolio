@@ -9,11 +9,11 @@ export default function Technologies() {
   return (
     <div className="orbit">
       <ul>
-        {data?.map((skill, id) => (
+        {data?.map((skill: string | any, id: number) => (
           <li key={id}>
             <div>
               <Image
-                img_src={`http://127.0.0.1:8000/${skill.skill_logo}`}
+                img_src={`http://127.0.0.1:8000${skill.skill_logo}`}
                 width="30"
                 height="30"
               />
