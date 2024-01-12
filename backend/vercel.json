@@ -1,14 +1,14 @@
 {
   "builds": [
     {
-      "src": "backend/wsgi.py",
+      "src": "sidfolio_project/wsgi.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "backend/wsgi.py"
+      "dest": "sidfolio_project/wsgi.py"
     }
   ]
 }
