@@ -3,3 +3,4 @@ backend/sidfolio_app/migrations
 backend/sidfolio_app/__pycache__
 backend/sidfolio_project/__pycache__
 backend/.env
+.vercel
