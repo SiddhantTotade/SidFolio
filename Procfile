@@ -1,0 +1,1 @@
+web: gunicorn sidfolio_project.wsgi --log-file -
