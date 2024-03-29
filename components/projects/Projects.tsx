@@ -7,7 +7,9 @@ import { useDataStore } from "@/zustand/store";
 import { FaGithub, FaExternalLinkSquareAlt } from "react-icons/fa";
 
 export default function Projects() {
-  const [expandedCardIndex, setExpandedCardIndex] = useState(null);
+  const [expandedCardIndex, setExpandedCardIndex] = useState<number | null>(
+    null
+  );
   const projectData = useDataStore((state: any) => state.projectData);
   const fetchProject = useDataStore((state: any) => state.fetchProject);
 
