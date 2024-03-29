@@ -1,0 +1,56 @@
+.blob {
+  position: absolute;
+  top: 30%;
+  right: 30%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  width: 150px;
+  aspect-ratio: 1/2;
+  animation: animate 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite
+    alternate forwards;
+  filter: blur(80px);
+  background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+
+  /*  Optional  */
+  box-shadow: inset 50px 50px 17px 0px #007bff, inset 50px 50px 17px 0px #ff0084;
+}
+
+@keyframes animate {
+  0% {
+    translate: 40% -25%;
+    border-radius: 60% 40% 30% 70% / 100% 85% 92% 74%;
+    transform: rotate(0deg) translateY(100px) rotate(0deg);
+  }
+  50% {
+    translate: 0% 13%;
+    border-radius: 20% 71% 47% 70% / 81% 15% 22% 54%;
+    rotate: 41deg;
+    scale: 1.15;
+  }
+  100% {
+    translate: 40% -25%;
+    border-radius: 100% 75% 92% 74% / 60% 80% 30% 70%;
+    rotate: -60deg;
+    scale: 1.05;
+    transform: rotate(360deg) translateY(100px) rotate(-360deg);
+  }
+}
+
+/* .blob {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: auto;
+    background-color: green;
+    animation: GFG 5s infinite linear;
+  } */
+
+/* @keyframes GFG {
+    0% {
+      transform: rotate(0deg) translateY(100px) rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg) translateY(100px) rotate(-360deg);
+    }
+  } */
