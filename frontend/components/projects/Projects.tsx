@@ -28,7 +28,12 @@ export default function Projects() {
   };
 
   return (
-    <div className="flex flex-wrap gap-2 p-5">
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="flex flex-wrap gap-2 p-5"
+    >
       {isLoading ? (
         <ProjectSkeleton />
       ) : (
@@ -37,9 +42,6 @@ export default function Projects() {
             <motion.div
               key={index}
               layout
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
               className={`bg-slate-100 dark:bg-gray-700 gap-2 text-white rounded-xl cursor-pointer from-purple-700 via-pink-700 to-orange-700 p-3 dark:hover:bg-gradient-to-r inline-block animate-text ${
                 expandedCardIndex === index ? "large" : "small"
               }`}
@@ -91,6 +93,6 @@ export default function Projects() {
           </div>
         ))
       )}
-    </div>
+    </motion.div>
   );
 }
