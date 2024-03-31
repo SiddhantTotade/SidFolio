@@ -70,8 +70,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "sidfolio_project.urls"
 
-CORS_ALLOWED_ORIGINS = os.environ.get("CORS_ALLOWED_ORIGINS").split(", ")
-
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
