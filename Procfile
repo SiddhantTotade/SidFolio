@@ -1,1 +1,0 @@
-web: gunicorn sidfolio_project/wsgi.py
