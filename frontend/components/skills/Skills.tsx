@@ -1,5 +1,6 @@
 import React from "react";
 import AppCard from "../common/Card";
+import { motion } from "framer-motion";
 
 import { skillsData } from "./data/skills";
 
@@ -7,7 +8,10 @@ import "./styles/style.css";
 
 export default function Skills() {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
       id="skills"
       className="flex flex-wrap m-3 gap-5 justify-center overflow-x-hidden p-2 overflow-scroll"
     >
@@ -24,6 +28,6 @@ export default function Skills() {
           </div>
         </AppCard>
       ))}
-    </div>
+    </motion.div>
   );
 }
