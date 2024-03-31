@@ -1,1 +1,1 @@
-web: gunicorn sidfolio.wsgi --log-file -
+web: gunicorn backend/sidfolio_project/wsgi.py

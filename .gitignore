@@ -4,4 +4,3 @@ sidfolio_app/__pycache__
 sidfolio_project/__pycache__
 db.sqlite3
 .env
-.vercel
