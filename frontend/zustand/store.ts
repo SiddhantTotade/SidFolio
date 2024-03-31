@@ -10,7 +10,7 @@ interface DataStore {
   projectData: any[];
 }
 
-const url = "http://127.0.0.1:8000";
+const url = process.env.NEXT_PUBLIC_PRODUCTION_URL;
 
 export const useDataStore = create<DataStore>((set, get) => ({
   activeTab: "home",
@@ -27,18 +27,9 @@ export const useDataStore = create<DataStore>((set, get) => ({
       console.log(err);
     }
   },
-  fetchSkill: async () => {
-    try {
-      const response = await fetch(url + "/api/skill/", { method: "GET" });
-      const data = await response.json();
-      set({ skillsData: data });
-    } catch (err) {
-      console.log(err);
-    }
-  },
   fetchProject: async () => {
     try {
-      const response = await fetch(url + "/api/project/", { method: "GET" });
+      const response = await fetch(url + "/api/projects/", { method: "GET" });
       const data = await response.json();
       set({ projectData: data });
     } catch (err) {
