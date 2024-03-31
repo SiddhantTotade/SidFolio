@@ -1,1 +1,1 @@
-web: gunicorn backend/sidfolio_project/wsgi.py
+web: gunicorn sidfolio_project/wsgi.py
