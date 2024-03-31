@@ -24,12 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-u7vktk#a78k*e7g!mba!@o!(d%n4mxug1pxw#_ylh@#l@+66@x"
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv("DEBUG")
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [os.getenv("ALLOWED_HOSTS").split(",")]
 
 # Application definition
 
@@ -63,7 +63,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "sidfolio_project.urls"
 
-CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]
+CORS_ALLOWED_ORIGINS = os.getenv("CORS_ALLOWED_ORIGINS").split(",")
 
 TEMPLATES = [
     {

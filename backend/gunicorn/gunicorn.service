@@ -6,7 +6,7 @@ After=network.target
 [Service]
 User=ubuntu
 Group=www-data
-WorkingDirectory=/home/ubuntu/SidFolio/backend/backend
+WorkingDirectory=/home/ubuntu/SidFolio/backend/backend/
 ExecStart=/home/ubuntu/SidFolio/venv/bin/gunicorn \
           --access-logfile - \
           --workers 3 \
