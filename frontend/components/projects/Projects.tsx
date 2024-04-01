@@ -64,7 +64,7 @@ export default function Projects() {
                   transition={{ duration: 1 }}
                   exit={{ opacity: 0 }}
                 >
-                  <p className="text-slate-700 dark:text-slate-300">
+                  <p className="text-slate-700 dark:text-slate-300 text-justify text-small">
                     {item.description}
                   </p>
                   <div className="flex gap-2">
