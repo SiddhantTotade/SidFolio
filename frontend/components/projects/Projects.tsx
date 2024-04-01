@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 
 import { useDataStore } from "@/zustand/store";
 
+import "./styles/style.css";
 import ProjectSkeleton from "./ui/ProjectSkeleton";
 import { FaGithub, FaExternalLinkSquareAlt } from "react-icons/fa";
 
@@ -32,7 +33,8 @@ export default function Projects() {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      className="flex flex-wrap gap-2 p-5"
+      id="projects"
+      className="flex flex-wrap gap-2 p-5 overflow-scroll"
     >
       {isLoading ? (
         <ProjectSkeleton />
